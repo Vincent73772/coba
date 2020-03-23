@@ -1,0 +1,191 @@
+<!doctype html>
+ <html>
+ <head>
+  
+ <title>Data Diriku</title>
+ <link rel="stylesheet" href="css biodata.css"/>
+   
+   
+ </head>
+ <body>
+ <form action="#" style="width: 1000px"class="posisi";>
+ <fieldset class="h"/>
+ <table style="width: 1000px;">
+ <tr>
+ <td rowspan="15" width="500px">
+ <img src="assets/bootstrap/img/vincent.jpg.jpeg" width="400px" height="420px"/>
+ </td>
+ </tr>
+ <tr>
+ <td><b>Nama Lengkap</b></td>
+ <td>:</td>
+ <td>Vincent Kurniawan</td>
+ </tr>
+ <tr>
+ <td><b>NIM</b></td>
+ <td>:</td>
+ <td>201701048</td>
+ </tr>
+ <tr>
+ <td><b>Tempat, Tanggal Lahir</b></td>
+ <td>:</td>
+ <td>Purwokerto, 25 februari 1999</td>
+ </tr>
+ <tr>
+ <td><b>Umur</b></td>
+ <td>:</td>
+ <td>21 Tahun</td>
+ </tr>
+ <tr>
+ <td><b>Jenis Kelamin</b></td>
+ <td>:</td>
+ <td>Laki - Laki</td>
+ </tr>
+ <tr>
+ <td><b>Kelas</b></td>
+ <td>:</td>
+ <td>Sistem Informasi B</td>
+ </tr>
+
+ <td><b>Alamat</b></td>
+ <td>:</td>
+ <td>Purwokerto lor</td>
+ </tr>
+ <tr>
+ <td><b>Pekerjaan</b></td>
+ <td>:</td>
+ <td>Mahasiswa</td>
+ </tr>
+ <tr>
+ <td><b>Kewarganegaraan</b></td>
+ <td>:</td>
+ <td>Indonesia</td>
+ </tr>
+ <tr>
+ <td><b>Riwayat</b></td>
+ <td>:</td>
+ <td colspan="1" align="left">
+ Pengen tahu? <a href="Detail.html"style="text-decoration: none;" target="_parent"><input
+ type="button"value="Cari tahu ? "/></a>
+ </td>
+ </tr>
+ </table>
+ </fieldset>
+ </form>
+
+<br>
+<div class="row no-gutters">
+<h2>Hitung Nilai</h2>
+
+
+</div>
+<form name="form" action="javascript:void(0);">
+	<table>
+		<tr>
+			<td>Nilai Ujian Teori 1</td>
+			<td><input type="text" name="nilai_ujian_teori1"></td>
+		</tr>
+		<tr>
+			<td>Nilai Ujian Teori 2</td>
+			<td><input type="text" name="nilai_ujian_teori2"></td>
+		</tr>
+		<tr>
+			<td>Nilai Ujian Praktek</td>
+			<td><input type="text" name="nilai_ujian_praktek"></td>
+		</tr>
+		<tr>
+			<td>Nilai Rata-rata</td>
+			<td><input type="text" name="nakhir" disabled></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="hasil" value="hitung" onclick="nilaiakhir()"></td>
+			<td><input type="reset" name="reset"></td>
+		</tr>
+	</table>
+</form>
+
+<script type="text/javascript">
+
+/** kode fungsi nilai akhir */
+function nilaiakhir(){
+	var nilai_ujian_teori1 = parseInt(document.form.nilai_ujian_teori1.value);
+	var nilai_ujian_teori2 = parseInt(document.form.nilai_ujian_teori2.value);
+	var nilai_ujian_praktek = parseInt(document.form.nilai_ujian_praktek.value);
+
+	var nakhir = (parseInt(nilai_ujian_teori1/3)) + (parseInt(nilai_ujian_teori2/3)) + (parseInt(nilai_ujian_praktek/3));
+	document.form.nakhir.value = nakhir;
+
+	
+	document.form.nhuruf.value = nhuruf;
+ 
+}
+
+
+</script>
+ <p><script language="javascript">
+
+function jumlah()
+{
+    var bil1=parseFloat (document.fform.bilangan1.value);
+    if (isNaN(bil1))
+        bil1=0.0;
+    var bil2=parseFloat (document.fform.bilangan2.value);
+    if (isNaN(bil2))
+        bil2=0.0;
+    var bil3=parseFloat (document.fform.bilangan3.value);
+    if (isNaN(bil3))
+        bil3=0.0;
+    var Nilai_Akhir=(((2*bil1) + (3*bil2) + (5*bil3))/10)
+    alert("Nilai Akhir Anda = " + Nilai_Akhir);
+    if(Nilai_Akhir>90)
+        {
+        alert("Selamat Anda LULUS" );
+        }
+        else if (Nilai_Akhir>90)
+        {
+        alert(" Selamat Anda LULUS" );
+        }
+        else if (Nilai_Akhir>90)
+        {
+        alert(" Selamat Anda LULUS");
+        }
+        else if (Nilai_Akhir>90)
+        {
+        alert(" Anda TIDAK LULUS");
+        }
+        else
+        {
+        alert("Anda TIDAK LULUS");
+        }   
+        location.reload();
+}
+//--></script></p>
+<FORM NAME="fform">
+    <H1><BR>Status Beasiswa : </H1>
+    <PRE>
+        Nilai Ujian Teori      :<input type="text" size="11" name="bilangan1">
+        Nilai Ujian Praktek    :<input type="text" size="11" name="bilangan2">
+        Nilai Toefl            :<input type="text" size="11" name="bilangan3">
+    </PRE>
+    <P>
+        <input type="button" value="jumlahkan" onclick="jumlah()">
+        <input type="reset" value="ulang">
+    </FORM>
+    <div class="card">
+    
+        <div class="card-body">
+          <h5 class="card-title">Score Toefl</h5>
+          <p class="card-text">
+          <h3><div id="toefl1"></div></h3>
+          <div id="toefl"></div></p>
+        
+          
+        </div>
+      </div>
+       
+      </div>
+            
+   
+  </div>
+ </body>
+ </html>
